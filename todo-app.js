@@ -7,18 +7,18 @@ form.addEventListener('submit', (event) => {
     addTodo();
 });
 
-function addTodo(){
-    const todo =input.value.trim();
+function addTodo() {
+    const todo = input.value.trim();
     if (todo) {
         const li = document.createElement('li');
         li.innerHTML = `
         <span>${todo}</span>
         <button>delete</button>
         `;
-        list.appendChild(li);
-        input.value= '';
+        list.appendChild(li); sa
+        input.value = '';
         const deleteButton = li.querySelector('button');
-        deleteButton.addEventListener('click', () =>{
+        deleteButton.addEventListener('click', () => {
             list.removeChild(li);
         });
     }
